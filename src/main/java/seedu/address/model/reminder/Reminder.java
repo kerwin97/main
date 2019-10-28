@@ -7,36 +7,31 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import seedu.address.model.classid.ClassId;
-import seedu.address.model.task.Task;
-import seedu.address.model.task.TaskTime;
-
 /**
- * Represents a Task in the calendar.
+ * Represents a Reminder in the calendar.
  */
 public class Reminder {
     // Identity fields
-    private final Task task;
-    private final ClassId classId;
-    private final Set<TaskTime> taskTimeSet = new HashSet<>();
+    private final ReminderDescription reminderDescription;
+    private final Set<ReminderTime> reminderTimeSet = new HashSet<>();
 
     /**
      * Every field must be present and not null.
      */
-    public Reminder(Task task) {
-        requireAllNonNull(task);
-        this.task = task;
-        this.classId = task.getClassId();
+    public Reminder(ReminderDescription reminderDescription, Set<ReminderTime> reminderTime) {
+        requireAllNonNull(reminderDescription);
+        this.reminderDescription = reminderDescription;
+        reminderTimeSet.addAll(reminderTime);
     }
 
 
 
-    public ClassId getClassId() {
-        return classId;
+    public ReminderDescription getDescription() {
+        return reminderDescription;
     }
 
-    public Set<TaskTime> getTime() {
-        return Collections.unmodifiableSet(taskTimeSet);
+    public Set<ReminderTime> getTime() {
+        return Collections.unmodifiableSet(reminderTimeSet);
     }
 
 
@@ -50,7 +45,7 @@ public class Reminder {
         }
 
         return otherReminder != null
-                && otherReminder.getClassId().equals(getClassId());
+                && otherReminder.getDescription().equals(getDescription());
     }
 
     /**
@@ -63,29 +58,28 @@ public class Reminder {
             return true;
         }
 
-        if (!(other instanceof Task)) {
+        if (!(other instanceof Reminder)) {
             return false;
         }
 
-        Task otherPerson = (Task) other;
-        return otherPerson.getClassId().equals(getClassId())
-                && otherPerson.getTime().equals(getTime());
+        Reminder otherReminder = (Reminder) other;
+        return otherReminder.getDescription().equals(getDescription())
+                && otherReminder.getTime().equals(getTime());
     }
 
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(task);
+        return Objects.hash(reminderDescription, reminderTimeSet);
     }
 
     @Override
     public String toString() {
         final StringBuilder builder = new StringBuilder();
-        builder.append(" Module: ")
-                .append(getClassId())
+        builder.append(" Description: ")
+                .append(getDescription())
                 .append(" Time: ")
-                .append(getTime())
-                .append(" Status: ");
+                .append(getTime());
         return builder.toString();
     }
 }

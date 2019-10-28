@@ -131,15 +131,6 @@ public class AddressBook implements ReadOnlyAddressBook {
         tasks.remove(key);
     }
 
-    /**
-     * set new string for task
-     * @return a tasks string
-     */
-    public String toTasksString() {
-        return tasks.asUnmodifiableObservableList().size() + " tasks";
-        // TODO: refine later
-    }
-
     //// person-level operations
 
     /**
@@ -234,7 +225,6 @@ public class AddressBook implements ReadOnlyAddressBook {
         commands.remove(key);
     }
 
-
     /**
      * Returns true if a person with the same identity as {@code person} exists in the address book.
      */
@@ -259,6 +249,40 @@ public class AddressBook implements ReadOnlyAddressBook {
         earning.remove(key);
     }
     //// util methods
+
+    /**
+     * Adds a reminder to the address book.
+     * The person must not already exist in the address book.
+     */
+    public void addReminder(Reminder r) {
+        reminder.add(r);
+    }
+
+    /**
+     * Removes {@code key} from this {@code AddressBook}.
+     * {@code key} must exist in the address book.
+     */
+    public void removeReminder(Reminder key) {
+        reminder.remove(key);
+    }
+
+    /**
+     * Returns true if a reminder with the same identity as {@code reminder} exists in the address book.
+     */
+    public boolean hasReminder(Reminder reminders) {
+        requireNonNull(reminders);
+        return reminder.contains(reminders);
+    }
+
+    /**
+     * Replaces the given reminder {@code target} in the list with {@code editedReminder}.
+     * {@code target} must exist in the address book.
+     * The reminder identity of {@code editedReminder} must not be the same as another reminder in the address book.
+     */
+    public void setReminder(Reminder reminders, Reminder editedReminder) {
+        requireNonNull(editedReminder);
+        reminder.setReminder(reminders, editedReminder);
+    }
 
     /**
      * Add note into address book.
@@ -293,7 +317,6 @@ public class AddressBook implements ReadOnlyAddressBook {
      */
     public void setNotes(Notes target, Notes editedNote) {
         requireNonNull(editedNote);
-
         notes.setNotes(target, editedNote);
     }
 
@@ -338,7 +361,7 @@ public class AddressBook implements ReadOnlyAddressBook {
         return other == this // short circuit if same object
                 || (other instanceof AddressBook // instanceof handles nulls
                 && (persons.equals(((AddressBook) other).persons))
-                || (tasks.equals(((AddressBook) other).tasks)));
+                && (tasks.equals(((AddressBook) other).tasks)));
     }
 
     @Override

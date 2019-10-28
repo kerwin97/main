@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
@@ -18,8 +19,7 @@ import seedu.address.model.commands.CommandObject;
 import seedu.address.model.commands.CommandWord;
 import seedu.address.model.earnings.Amount;
 import seedu.address.model.earnings.Date;
-import seedu.address.model.earnings.Month;
-import seedu.address.model.earnings.Week;
+import seedu.address.model.earnings.Type;
 import seedu.address.model.note.Content;
 import seedu.address.model.note.ModuleCode;
 import seedu.address.model.person.Attendance;
@@ -27,6 +27,8 @@ import seedu.address.model.person.Name;
 import seedu.address.model.person.Participation;
 import seedu.address.model.person.Picture;
 import seedu.address.model.person.Result;
+import seedu.address.model.reminder.ReminderDescription;
+import seedu.address.model.reminder.ReminderTime;
 import seedu.address.model.task.Marking;
 import seedu.address.model.task.TaskTime;
 
@@ -191,9 +193,9 @@ public class ParserUtil {
     /**
      * Parses {@code Collection<String> taskTimes} into a {@code Set<TaskTime>}.
      */
-    public static Set<TaskTime> parseTaskTimes(Collection<String> taskTimes) throws ParseException {
+    public static TreeSet<TaskTime> parseTaskTimes(Collection<String> taskTimes) throws ParseException {
         requireNonNull(taskTimes);
-        final Set<TaskTime> taskTimeList = new HashSet<>();
+        final TreeSet<TaskTime> taskTimeList = new TreeSet<>(TaskTime::compareTo);
         for (String taskTime : taskTimes) {
             taskTimeList.add(parseTaskTime(taskTime));
         }
@@ -246,33 +248,40 @@ public class ParserUtil {
     }
 
     /**
-     * Parses a {@code String month} into an {@code Month}.
+     * Parses a {@code String reminderDescription} into a {@code ReminderDescription}.
      * Leading and trailing whitespaces will be trimmed.
-     *
-     * @throws ParseException if the given {@code month} is invalid.
      */
-    public static Month parseMonth(String month) throws ParseException {
-        requireNonNull(month);
-        String trimmedMonth = month.trim();
-        if (!Month.isValidMonth(trimmedMonth)) {
-            throw new ParseException(Month.MESSAGE_CONSTRAINTS);
-        }
-        return new Month(trimmedMonth);
+    public static ReminderDescription parseReminderDescription(String reminderDescription) {
+        requireNonNull(reminderDescription);
+        String trimmedReminderDescription = reminderDescription.trim();
+        return new ReminderDescription(trimmedReminderDescription);
     }
 
     /**
-     * Parses a {@code String week} into an {@code Week}.
+     * Parses a {@code String reminderTime} into a {@code ReminderTime}.
      * Leading and trailing whitespaces will be trimmed.
      *
-     * @throws ParseException if the given {@code week} is invalid.
+     * @throws ParseException if the given {@code taskTime} is invalid.
      */
-    public static Week parseWeek(String week) throws ParseException {
-        requireNonNull(week);
-        String trimmedWeek = week.trim();
-        if (!Week.isValidWeekNum(trimmedWeek)) {
-            throw new ParseException(Week.MESSAGE_CONSTRAINTS);
+    public static ReminderTime parseReminderTime(String reminderTime) throws ParseException {
+        requireNonNull(reminderTime);
+        String trimmedReminderTime = reminderTime.trim();
+        if (!ReminderTime.isValidReminderTime(trimmedReminderTime)) {
+            throw new ParseException(ReminderTime.MESSAGE_CONSTRAINTS);
         }
-        return new Week(trimmedWeek);
+        return new ReminderTime(trimmedReminderTime);
+    }
+
+    /**
+     * Parses {@code Collection<String> reminderTimes} into a {@code Set<ReminderTime>}.
+     */
+    public static Set<ReminderTime> parseReminderTimes(Collection<String> reminderTimes) throws ParseException {
+        requireNonNull(reminderTimes);
+        final Set<ReminderTime> reminderTimeList = new HashSet<>();
+        for (String reminderTime : reminderTimes) {
+            reminderTimeList.add(parseReminderTime(reminderTime));
+        }
+        return reminderTimeList;
     }
 
     /**
@@ -318,5 +327,20 @@ public class ParserUtil {
             throw new ParseException(Name.MESSAGE_CONSTRAINTS);
         }
         return new Content(trimmedContent);
+    }
+
+    /**
+     * Parses a {@code String type} into an {@code Type}.
+     * @param type String of type.
+     * @return Type.
+     * @throws ParseException if the given {@code type} is invalid.
+     */
+    public static Type parseType(String type) throws ParseException {
+        requireNonNull(type);
+        String trimmedType = type.trim();
+        if (!Type.isValidType(trimmedType)) {
+            throw new ParseException(Type.MESSAGE_CONSTRAINTS);
+        }
+        return new Type(trimmedType);
     }
 }
