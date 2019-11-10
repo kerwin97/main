@@ -1,0 +1,988 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Xuerneas - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Xuerneas - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-tutoraid"><a class="link" href="#project-tutoraid">PROJECT: TutorAid</a></h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title"><strong><em>Introduction</em></strong></div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/xuerneas.png" alt="xuerneas" width="150"></span> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[<a href="https://github.com/Xuerneas"><strong><em>GitHub</em></strong></a>]<br>
+Hi, I&#8217;m Xu Tunan, a Year Two SoC Student from National University of Singapore (NUS). This Project Portfolio is aimed to introduce our project&#8201;&#8212;&#8201;TutorAid, as well as state my own contributions in this project.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview-of-the-tutoraid"><a class="link" href="#overview-of-the-tutoraid">Overview of the TutorAid</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TutorAid is a desktop application that designed to help the teaching assistants in NUS. It is a combination of the Calendar, the Earning Tracker, the Notepad, as well as the Student Profile Manager.<br>
+Those features of TutorAid was selected specifically for the target user - tutors, based on their exact needs.<br></p>
+</div>
+<div class="paragraph">
+<p>The user interacts with TutorAid using a Command Line Interface (CLI), with a Graphical User Interface (GUI) created with JavaFX for user to better view the interactions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>Major enhancement</em></strong>: added <strong>the ability to undo/redo previous commands</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command.</p>
+</li>
+<li>
+<p>Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.</p>
+</li>
+<li>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+</li>
+<li>
+<p>Credits: The implementation of the undo and redo commands were inspired by Address Book 4, however more challenging in this project due to the complexity.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong><em>Major enhancement</em></strong>: added <strong>the task management commands (Part of Calendar Feature)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to <code>add</code>, <code>delete</code>, <code>edit</code>, <code>find</code>, <code>list</code> tasks.</p>
+</li>
+<li>
+<p>Justification: This feature is one of the most important features in the TutorAid since it aimed to help tutors and this feature is really useful for tutors.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong><em>Minor enhancement</em></strong>: added a sorting method in TaskTime so that in each task, their task times would be sorted automatically.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Justification: This enhancement is added to show each task clearer. Also, users do not need to worry that they key in the task time in wrong order anymore.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://github.com/AY1920S1-CS2103T-F14-2/main/commits?author=Xuerneas"><strong>All Commits</strong></a>][<a href="https://nus-cs2103-ay1920s1.github.io/tp-dashboard/#search=xuerneas&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2019-09-06&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=Xuerneas&amp;tabRepo=AY1920S1-CS2103T-F14-2%2Fmain%5Bmaster%5D"><strong>Code Contribution</strong></a>]</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed bugs reported by other users in Practical Exam Dry Run: <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/issues/296">#296</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/issues/300">#300</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/issues/301">#301</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enhancements to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrote additional tests for existing features to increase code coverage (Pull requests <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/232">#232</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/311">#311</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/320">#320</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added detailed implementation documentation for undo/redo feature and most part of the calendar feature in User Guide, including diagrams. (Pull requests <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/220">#220</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/341">#341</a>)</p>
+</li>
+<li>
+<p>Added detailed implementation documentation with diagrams for undo/redo feature and add task command, class diagrams of Storage and Model, as well as user stories and use cases in Developer Guide. (Pull requests <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/118">#118</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/161">#161</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/220/files">#220</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/311/files">#311</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reviewed Pull Request with feedback : <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/164">#164</a>, <a href="https://github.com/AY1920S1-CS2103T-F14-2/main/pull/343">#343</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tools:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set up Coveralls for the test coverage of the project.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="adding-task-code-add_task-code"><a class="link" href="#adding-task-code-add_task-code">Adding task: <code>add_task</code></a></h4>
+<div class="paragraph">
+<p>Adds a task to one or more time slots.<br>
+Format: <code>add_task c/MODULE mark/STATUS tt/TASK_TIME&#8230;&#8203;</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A task can have more than one time slots.<br>
+STATUS should only be Y or N.<br>
+<code>TASK_TIME</code> should be in the format "dd/MM/YYYY HH:mm, dd/MM/YYYY HH:mm".<br>
+If there are multiple task times, they will be automatically sorted based on their starting time.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add_task c/CS2103T mark/Y tt/13/09/2019 13:00, 20/09/2019 16:00 tt/21/09/2019 13:00, 21/09/2019 15:00</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/UserGuide/add_task.png" alt="add task" width="500"></span>
+<span class="image"><img src="../images/UserGuide/add_task_2.png" alt="add task 2" width="500"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add_task c/MA1521 Tutorial mark/N tt/02/11/2020 14:00, 02/11/2020 15:00</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-task-code-edit_task-code"><a class="link" href="#editing-task-code-edit_task-code">Editing task: <code>edit_task</code></a></h4>
+<div class="paragraph">
+<p>Update task information.<br>
+Format: <code>edit_task INDEX [c/CLASSID] [mark/STATUS] [tt/TASK_TIME]</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+INDEX must be a positive integer.<br>
+At least one element inside task should be edited.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit_task 1 c/CS2103</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/UserGuide/edit_task.png" alt="edit task" width="500"></span>
+<span class="image"><img src="../images/UserGuide/edit_task_2.png" alt="edit task 2" width="500"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit_task 1 tt/19/10/2019 12:00, 19/10/2019 14:00 mark/N</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-task-code-delete_task-code"><a class="link" href="#deleting-task-code-delete_task-code">Deleting task: <code>delete_task</code></a></h4>
+<div class="paragraph">
+<p>Deletes selected task.<br>
+Format: <code>delete_task INDEX</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+INDEX must be a positive integer.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete_task 1</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/UserGuide/delete_task.png" alt="delete task" width="500"></span>
+<span class="image"><img src="../images/UserGuide/delete_task_2.png" alt="delete task 2" width="500"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-tasks-based-on-module-code-find_task_by_module-code"><a class="link" href="#finding-tasks-based-on-module-code-find_task_by_module-code">Finding tasks based on Module : <code>find_task_by_module</code></a></h4>
+<div class="paragraph">
+<p>Find specific tasks by Module and list them.<br>
+Format: <code>find_task_by_module MODULE &#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>MODULE</code> is case insensitive. e.g <code>cs2100</code> will match <code>CS2100</code></p>
+</li>
+<li>
+<p>Only full words will be matched. e.g. <code>2100</code> will not match <code>CS2100</code></p>
+</li>
+<li>
+<p>Can find using more than one <code>MODULE</code> at a time.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find_task_by_module cs2100</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/UserGuide/find_task_1.png" alt="find task 1" width="500"></span>
+<span class="image"><img src="../images/UserGuide/find_task_2.png" alt="find task 2" width="500"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find_task_by_module CS2103T, cs2100</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-tasks-based-on-date-code-find_task_by_date-code"><a class="link" href="#finding-tasks-based-on-date-code-find_task_by_date-code">Finding tasks based on Date : <code>find_task_by_date</code></a></h4>
+<div class="paragraph">
+<p>Find specific tasks by Date and list them.<br>
+Format: <code>find_task_by_date DATE &#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>DATE</code> should be in the format dd/MM/YYYY. e.g 12/10/2019</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find_task_by_date 20/10/2019</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/UserGuide/find_task_3.png" alt="find task 3" width="500"></span>
+<span class="image"><img src="../images/UserGuide/find_task_4.png" alt="find task 4" width="500"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-all-tasks-code-list_task-code"><a class="link" href="#listing-all-tasks-code-list_task-code">Listing all tasks : <code>list_task</code></a></h4>
+<div class="paragraph">
+<p>List all tasks.<br>
+Format: <code>list_task</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">Undoing previous command : <code>undo</code></a></h3>
+<div class="paragraph">
+<p>Restores the Tutor Aid to the state before the previous <em>undoable</em> command was executed.<br>
+Format: <code>undo</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Undoable commands: those commands that modify the Tutor Aid&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> &#8230;&#8203;).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code><br>
+<code>list</code><br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/UserGuide/undo_1.png" alt="undo 1" width="500"></span>
+<span class="image"><img src="../images/UserGuide/undo_2.png" alt="undo 2" width="500"></span>
+<span class="image"><img src="../images/UserGuide/undo_3.png" alt="undo 3" width="500"></span>
+<span class="image"><img src="../images/UserGuide/undo_4.png" alt="undo 4" width="500"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list_task</code><br>
+<code>find_earnings</code><br>
+<code>undo</code><br>
+The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>edit_task 1 mark/N</code><br>
+<code>undo</code> (reverses the <code>edit_task 1 mark/N</code> command)<br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">Redoing the previously undone command : <code>redo</code></a></h3>
+<div class="paragraph">
+<p>Reverses the most recent <code>undo</code> command.<br>
+Format: <code>redo</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code><br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/UserGuide/undo_1.png" alt="undo 1" width="500"></span>
+<span class="image"><img src="../images/UserGuide/redo_2.png" alt="redo 2" width="500"></span>
+<span class="image"><img src="../images/UserGuide/redo_3.png" alt="redo 3" width="500"></span>
+<span class="image"><img src="../images/UserGuide/redo_4.png" alt="redo 4" width="500"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code><br>
+<code>redo</code><br>
+The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>edit_task 1 mark/N</code><br>
+<code>undo</code> (reverses the <code>edit_task 1 mark/N</code> command)<br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>edit_task 1 mark/N</code> command)<br></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary"><a class="link" href="#command-summary">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Help</strong> : <code>help</code></p>
+</li>
+<li>
+<p><strong>Log</strong> :<br>
+<code>login user/USERNAME pass/PASSWORD</code><br>
+<code>register user/USERNAME pass/PASSWORD</code><br>
+<code>logout</code></p>
+</li>
+<li>
+<p><strong>Tab</strong> : <code>tab TAB_DESTINATION</code></p>
+</li>
+<li>
+<p><strong>Calendar:</strong><br>
+<code>add_task c/MODULE mark/STATUS tt/TASK_TIME&#8230;&#8203;</code><br>
+<code>edit_task INDEX [mark/STATUS] [tt/TASK_TIME]</code><br>
+<code>delete_task 1</code><br>
+<code>find_task_by_module MODULE &#8230;&#8203;</code><br>
+<code>find_task_by_date DATE &#8230;&#8203;</code><br>
+<code>list_task</code></p>
+</li>
+<li>
+<p><strong>Reminder</strong> : <code>reminder INDEX STATUS</code></p>
+</li>
+<li>
+<p><strong>Earnings</strong> :<br>
+<code>add_earnings d/DATE c/CLASSID amt/AMOUNT</code><br>
+<code>update_earnings d/DATE c/CLASSID amt/AMOUNT type/TYPE</code><br>
+<code>delete_earnings d/DATE c/CLASSID</code><br>
+<code>find_earnings k/KEYWORD &#8230;&#8203;</code><br>
+<code>claim_earnings d/DATE c/CLASSID</code><br>
+<code>filter_earnings VARIABLE</code></p>
+</li>
+<li>
+<p><strong>Note</strong> :<br>
+<code>addnote mod/MODULE_CODE c/CONTENT</code><br>
+<code>editnote INDEX mod/MODULE_CODE c/CONTENT</code><br>
+<code>deletenote INDEX</code><br>
+<code>findnote KEYWORD</code><br>
+<code>listnote</code></p>
+</li>
+<li>
+<p><strong>Student List</strong> :<br>
+<code>add n/NAME c/CLASSID</code><br>
+<code>delete INDEX</code><br>
+<code>edit INDEX n/NAME pic/PICTURE r/RESULT att/ATTENDANCE part/PARTICIPATION c/CLASS</code><br>
+<code>list</code><br>
+<code>find NAME</code><br>
+<code>set_pic INDEX pic/FILENAME</code><br>
+<code>assign_class INDEXES c/CLASSID</code><br>
+<code>list_class CLASSID</code><br>
+<code>mark_attendance INDEXES</code><br>
+<code>mark_participation INDEXES</code></p>
+</li>
+<li>
+<p><strong>Undo</strong> : <code>undo</code></p>
+</li>
+<li>
+<p><strong>Redo</strong> : <code>redo</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="calendar-feature"><a class="link" href="#calendar-feature">Calendar Feature</a></h3>
+<div class="sect3">
+<h4 id="add-tasks"><a class="link" href="#add-tasks">Add Tasks</a></h4>
+<div class="paragraph">
+<p>The <code>add_task</code> command allows for tutors to add their tasks into TutorAid.</p>
+</div>
+<div class="paragraph">
+<p>The format for the <code>add_task</code> command is as follows:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>add_task c/&lt;CLASSID&gt; mark/&lt;MARKING&gt; tt/&lt;TASKTIME&gt; ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Overview</strong></p>
+</div>
+<div class="paragraph">
+<p>The add claim <code>add_task</code> mechanism is facilitated by <code>AddTaskCommand</code> and <code>AddTaskCommandParser</code>, taking in the
+following input from the user: <code>ClassId</code>, <code>Marking</code>, <code>TaskTime</code> which will construct <code>Task</code> objects.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AddTaskSequenceDiagram.png" alt="AddTaskSequenceDiagram">
+</div>
+<div class="title">Figure 1. Add Task Command Sequence Diagram</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>AddTaskCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>AddTaskCommand</code> implements <code>Parser</code> with the following operation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AddTaskCommandParser#parse()</code> - This operation will take in a <code>String</code> input from the user and create
+individual objects based on the prefixes <code>c/</code>, <code>mark/</code> and <code>tt/</code>. The <code>String</code> value after the respective prefixes
+will create the respective objects. A validation check will be done to ensure that the strings that are entered
+by the user is entered correctly. If any of the strings entered are invalid, an error will be shown to the user to
+enter the correct format of the respective objects.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>classId</code> would use <code>ParserUtil#parseClassId()</code> to ensure that the class id typed in by the user is in the correct format.</p>
+</li>
+<li>
+<p><code>mark</code> would use <code>ParserUtil#parseMarking()</code> to ensure that the Marking entered by the user is in the correct format with only "Y" or "N".</p>
+</li>
+<li>
+<p><code>taskTime</code> would use <code>ParseUtil#parseTaskTimes()</code> to ensure that the TaskTime entered by the user is in the correct format.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>After validation of the individual objects, an <code>Task</code> object would be created with the parameters <code>classId</code>, <code>Marking</code>,
+and <code>taskTime</code>.</p>
+</li>
+<li>
+<p><code>AddTaskCommandParser</code> would then return a <code>AddTaskCommand</code> object with the parameter, <code>Task</code> object.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarizes what happens when a user executes a new command.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AddTaskActivityDiagram.png" alt="AddTaskActivityDiagram">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Example Scenerio</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Step 1: The user enters <code>add_task c/CS2103T Lecture  mark/Y tt/20/9/2019 13:00, 21/9/2019 16:00 tt/21/9/2019 13:00, 21/9/2019 15:00</code>
+to add an task into the calendar.
+This adds an <code>Task</code> object, which is a module CS2103T that the user need to attempt at 1pm of 20th and 21st September 2019.
+The task is marked so that it would be reminded.</p>
+</li>
+<li>
+<p>Step 2: <code>LogicManager</code> would use <code>AddressBookParser#parse()</code> to parse input from the user.</p>
+</li>
+<li>
+<p>Step 3: <code>AddressBookParser</code> would match the command word given by the user with the correct command. In this example,
+the given command is <code>add_task</code>, thus, <code>AddTaskCommandParser</code> object would be created with the user&#8217;s input.</p>
+</li>
+<li>
+<p>Step 4: <code>AddTaskCommandParser</code> performs a validation check on each of the respective objects through
+<code>AddTaskCommandParser#parse()</code>. In this case, it would use <code>ParserUtil#parseClassId()</code>, <code>ParserUtil#parseMarking()</code>, and
+<code>ParserUtil#parseTaskTimes()</code>. It would then return a <code>AddTaskCommand</code> object with an <code>Task</code> object.</p>
+</li>
+<li>
+<p>Step 5: <code>LogicManager</code> would execute <code>AddTaskCommand#execute</code>. In this particular method, the <code>Task</code> object will be
+check with the rest of the prior <code>Task</code> object, to ensure that there is no duplicate <code>Task</code> object. If there are no similar
+<code>Task</code> object with the same parameters created previously, it would then be added into the task list.</p>
+</li>
+<li>
+<p>Step 6: <code>AddTaskCommand</code> would then return a <code>CommandResult</code> to <code>LogicManager</code>, which would show the user that the new <code>Task</code>
+object have been successfully added.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="undo-redo-feature"><a class="link" href="#undo-redo-feature">Undo/Redo feature</a></h3>
+<div class="paragraph">
+<p>The undo/redo mechanism is facilitated by <code>VersionedTutorAid</code>.
+It extends <code>TutorAid</code> with an undo/redo history, stored internally as an <code>tutorAidStateList</code> and <code>currentStatePointer</code>.
+Additionally, it implements the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>VersionedTutorAid#commit()</code>&#8201;&#8212;&#8201;Saves the current tutor aid state in its history.</p>
+</li>
+<li>
+<p><code>VersionedTutorAid#undo()</code>&#8201;&#8212;&#8201;Restores the previous tutor aid state from its history.</p>
+</li>
+<li>
+<p><code>VersionedTutorAid#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone tutor aid state from its history.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitTutorAid()</code>, <code>Model#undoTutorAid()</code> and <code>Model#redoTutorAid()</code> respectively.</p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user launches the application for the first time. The <code>VersionedTutorAid</code> will be initialized with the initial tutor aid state, and the <code>currentStatePointer</code> pointing to that single tutor aid state.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState0.png" alt="UndoRedoState0">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th person in the tutor aid. The <code>delete</code> command calls <code>Model#commitTutorAid()</code>, causing the modified state of the tutor aid after the <code>delete 5</code> command executes to be saved in the <code>tutorAidStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted tutor aid state.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState1.png" alt="UndoRedoState1">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 3. The user executes <code>add_task c/CS2103T &#8230;&#8203;</code> to add a new task. The <code>add_task</code> command also calls <code>Model#commitTutorAid()</code>, causing another modified tutor aid state to be saved into the <code>tutorAidStateList</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState2.png" alt="UndoRedoState2">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If a command fails its execution, it will not call <code>Model#commitTutorAid()</code>, so the tutor aid state will not be saved into the <code>tutorAidStateList</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 4. The user now decides that adding the task was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoTutorAid()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous tutor aid state, and restores the tutor aid to that state.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState3.png" alt="UndoRedoState3">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the <code>currentStatePointer</code> is at index 0, pointing to the initial tutor aid state, then there are no previous tutor aid states to restore. The <code>undo</code> command uses <code>Model#canUndoTutorAid()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the undo operation works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoSequenceDiagram.png" alt="UndoSequenceDiagram">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>UndoCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoTutorAid()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the tutor aid to that state.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the <code>currentStatePointer</code> is at index <code>tutorAidStateList.size() - 1</code>, pointing to the latest tutor aid state, then there are no undone tutor aid states to restore. The <code>redo</code> command uses <code>Model#canRedoTutorAid()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the tutor aid, such as <code>list</code>, will usually not call <code>Model#commitTutorAid()</code>, <code>Model#undoTutorAid()</code> or <code>Model#redoTutorAid()</code>. Thus, the <code>tutorAidStateList</code> remains unchanged.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState4.png" alt="UndoRedoState4">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitTutorAid()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>tutorAidStateList</code>, all tutor aid states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>add_task c/CS2103T &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState5.png" alt="UndoRedoState5">
+</div>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarizes what happens when a user executes a new command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CommitActivityDiagram.png" alt="CommitActivityDiagram">
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Saves the entire tutor aid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement.</p>
+</li>
+<li>
+<p>Cons: May have performance issues in terms of memory usage.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Individual command knows how to undo/redo by itself.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Will use less memory (e.g. for <code>delete</code>, just save the person being deleted).</p>
+</li>
+<li>
+<p>Cons: We must ensure that the implementation of each individual command are correct.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="user-stories"><a class="link" href="#user-stories">Appendix A: User Stories</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Priorities: High (must have) - <code>* * *</code>, Medium (nice to have) - <code>* *</code>, Low (unlikely to have) - <code>*</code></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 59%;">
+<colgroup>
+<col style="width: 22%;">
+<col style="width: 23%;">
+<col style="width: 25%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Priority</th>
+<th class="tableblock halign-left valign-top">As a &#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">I want to &#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">So that I can&#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">new user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see usage instructions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">refer to instructions when I forget how to use the App</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">add a new class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check the details of the task when I want</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">edit an existing task</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">update task information when I need</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">add my earnings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check my earnings when I want to</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check my existing classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">attend the classes in time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check the information of my classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know more about my students' situation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">know what&#8217;s the command format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">key in the correct command</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forgetful tutor user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">be reminded before my tutorials</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go for the tutorials on time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">caring tutor user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check the upcoming events</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remind my students</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>{More to be added}</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-cases"><a class="link" href="#use-cases">Appendix B: Use Cases</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>(For all use cases below, the <strong>System</strong> is the <code>TutorAid</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
+</div>
+<h3 id="use-case-delete-task" class="discrete">Use case: Delete task</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list tasks</p>
+</li>
+<li>
+<p>TutorAid shows a list of tasks</p>
+</li>
+<li>
+<p>User requests to delete a specific task in the list</p>
+</li>
+<li>
+<p>TutorAid deletes the person</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. TutorAid tells user that there is no task.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The given index is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.<br></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 07:10:22 UTC</div></div></div></body></html>
