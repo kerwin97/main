@@ -11,11 +11,15 @@
 <div class="paragraph">
 <p>[<a href="https://github.com/kerwin97">github</a>] [<a href="https://www.linkedin.com/in/kerwin-lim-a6442014b/">linkedin</a>]</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
 <p>Hello! My name is Kerwin Lim. I&#8217;m a Computer Science Major at the National University of Singapore (NUS). I&#8217;m currently in my second year of studies.</p>
 </div>
 <div class="paragraph">
-<p>This portfolio page aims to document the contributions I have made in the development of TutorAid, which is a project that my team and I completed for the module CS2103T. This project has definitely been greatly beneficial to my own learning and self-development in becoming a more competent software engineer.</p>
+<p>This portfolio page aims to document the contributions I have made in the development of TutorAid. Tutoraid is a project that my team and I completed for our CS2103T module. We have put in our heart and soul creating Tutoraid. It has been a tremendous learning journey for my team and I and we hope that user will enjoy and benefit from our product.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -176,6 +180,247 @@ allows you to see if you have claimed your earnings from your respective faculti
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="user-interface"><a class="link" href="#user-interface">User Interface</a></h3>
+<div class="sect3">
+<h4 id="tab-status"><a class="link" href="#tab-status">Tab Status</a></h4>
+<div class="paragraph">
+<p>The Tab that you are currently on will be shown on the bottom right corner<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/tabstatus.png" alt="tabstatus" width="600"">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="change-tab-code-tab-code"><a class="link" href="#change-tab-code-tab-code">Change tab : <code>tab</code></a></h4>
+<div class="paragraph">
+<p>Change tab to any of the available ones.<br>
+Format: <code>change_tab tab/DESTINATION</code></p>
+</div>
+<div class="paragraph">
+<p>Examples (All available destinations listed):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>change_tab tab/earnings</code></p>
+</li>
+<li>
+<p><code>change_tab tab/calendar</code></p>
+</li>
+<li>
+<p><code>change_tab tab/student_profile</code></p>
+</li>
+<li>
+<p><code>change_tab tab/reminders</code></p>
+</li>
+<li>
+<p><code>change_tab tab/notepad</code></p>
+</li>
+<li>
+<p><code>change_tab tab/task</code></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/tabchange.png" alt="tabchange" width="600">
+</div>
+<div class="title">Figure 2. Figure 1. Tab Change GUI</div>
+</div>
+<div class="paragraph">
+<p>The user may alternatively choose to change tab by using the Items on the Menu Bar.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reminders"><a class="link" href="#reminders">Reminders</a></h3>
+<div class="sect3">
+<h4 id="add-reminder"><a class="link" href="#add-reminder">Add Reminder</a></h4>
+<div class="paragraph">
+<p>Adds reminders.<br>
+Format: <code>addReminder rd/DESCRIPTION rt/DATE</code><br></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>DATE</code> should be in the format dd/MM/YYYY. e.g 12/10/2019</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add_reminder rd/CS2103T Homework rt/13/10/2019 13:00, 13/10/2019 15:00</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="delete-reminder"><a class="link" href="#delete-reminder">Delete Reminder</a></h4>
+<div class="paragraph">
+<p>Removes the reminder.<br>
+Format: <code>reminder INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteReminder 1</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-reminders-based-on-description-code-find_reminder_by_description-code"><a class="link" href="#finding-reminders-based-on-description-code-find_reminder_by_description-code">Finding Reminders based on Description : <code>find_reminder_by_description</code></a></h4>
+<div class="paragraph">
+<p>Find specific reminders by description and list them.<br>
+Format: <code>find_reminder_by_description DESCRIPTION &#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>DESCRIPTION</code> is case insensitive. e.g <code>cs2100</code> will match <code>CS2100</code></p>
+</li>
+<li>
+<p>Only full words will be matched. e.g. <code>2100</code> will not match <code>CS2100</code></p>
+</li>
+<li>
+<p>Can find using more than one <code>DESCRIPTION</code> at a time.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find_reminder_by_description CS2103T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/reminders/find_reminder_1.png" alt="find reminder 1" width="500"></span>
+<span class="image"><img src="../images/reminders/find_reminder_2.png" alt="find reminder 2" width="500"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find_reminder_by_description CS2103T, cs2100</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-reminders-based-on-date-code-find_reminder_by_date-code"><a class="link" href="#finding-reminders-based-on-date-code-find_reminder_by_date-code">Finding Reminders based on Date : <code>find_reminder_by_date</code></a></h4>
+<div class="paragraph">
+<p>Find specific reminders by date and list them.<br>
+Format: <code>find_reminders_by_date DATE &#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>DATE</code> should be in the format dd/MM/YYYY. e.g 12/10/2019</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find_reminders_by_date 13/10/2019</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/reminders/find_reminder_3.png" alt="find reminder 3" width="500"></span>
+<span class="image"><img src="../images/reminders/find_reminder_4.png" alt="find reminder 4" width="500"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-all-reminders-code-list_reminder-code"><a class="link" href="#listing-all-reminders-code-list_reminder-code">Listing all reminders : <code>list_reminder</code></a></h4>
+<div class="paragraph">
+<p>List all reminders.<br>
+Format: <code>list_reminder</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Reminders are automatically sorted by Start <code>DATE</code> with the most upcoming being on top.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="reminder-window"><a class="link" href="#reminder-window">Reminder Window</a></h4>
+<div class="paragraph">
+<p>The Reminder Window will pop up when Tutoraid is first loaded up.<br>
+It will list all the Reminders at hand.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/reminders/reminderwindow.png" alt="reminderwindow" width="500"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="calendar-view"><a class="link" href="#calendar-view">Calendar View</a></h4>
+<div class="paragraph">
+<p>Views the Task in Calendar View</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Clicking on a date will show the user the Tasks with that date as its Start Time in normal list view.<br>
+The Calendar will display the tasks starting on that date and the amount of tasks starting on that date.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The maximum number of tasks that can be shown on each date is 2. If there are more than <strong>2</strong> tasks on a date, a <code>&#8230;&#8203;</code> will be added at the bottom of that date to indicate that there are more tasks not shown.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/calendarview.png" alt="calendarview" width="700"></span></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -192,4 +437,4 @@ allows you to see if you have claimed your earnings from your respective faculti
 </tbody>
 </table>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 19:13:10 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-10 20:19:01 UTC</div></div></div></body></html>
