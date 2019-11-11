@@ -286,6 +286,7 @@ Format: <code>change_tab tab/DESTINATION</code></p>
 <h4 id="add-reminder"><a class="link" href="#add-reminder">Add Reminder</a></h4>
 <div class="paragraph">
 <p>Adds reminders.<br>
+Reminders must be unique and cannot have the same <code>DESCRIPTION</code><br>
 Format: <code>add_reminder rd/DESCRIPTION rt/START_TIME, END_TIME</code><br></p>
 </div>
 <div class="admonitionblock tip">
@@ -306,6 +307,9 @@ A Reminder can have more than one time slots.
 <ul>
 <li>
 <p><code>START_TIME</code> and <code>END_TIME</code> must be in the format "dd/MM/YYYY HH:mm, dd/MM/YYYY HH:mm".</p>
+</li>
+<li>
+<p>The <code>END_TIME</code> must be after the <code>START_TIME</code>.</p>
 </li>
 <li>
 <p>If there are multiple task times, they will be automatically sorted based on their <code>START_TIME</code>.</p>
@@ -521,9 +525,23 @@ If there is a Task starting on that date, only the Task&#8217;s <code>DESCRIPTIO
 <p>The add claim <code>add_reminder</code> mechanism is facilitated by <code>addReminderCommand</code> and <code>addReminderParser</code>, taking in the
 following input from the user: <code>Description</code>, <code>Time</code>, which will construct <code>Reminder</code> objects.</p>
 </div>
-<div class="paragraph">
-<div class="title">Add Reminder Command Sequence Diagram</div>
-<p>##diagram to be added</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/reminders/AddReminderSequenceDiagram.png" alt="AddReminderSequenceDiagram">
+</div>
+<div class="title">Figure 6. Add Reminder Command Sequence Diagram</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>AddReminderParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The <code>addReminderCommand</code> implements <code>Parser</code> with the following operation:</p>
@@ -535,7 +553,7 @@ following input from the user: <code>Description</code>, <code>Time</code>, whic
 individual objects based on the prefixes <code>rd/</code> and <code>rt/</code>. The <code>String</code> value after the respective prefixes
 will create the respective objects. A validation check will be done to ensure that the strings that are entered
 by the user is entered correctly. If any of the strings entered are invalid, an error will be shown to the user to
-enter the correct format of the respectives objects.</p>
+enter the correct format of the respective objects.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -556,19 +574,13 @@ enter the correct format of the respectives objects.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The following activity diagram summarizes what happens when a user executes a new command.</p>
-</div>
-<div class="paragraph">
-<p>##diagram to be added</p>
-</div>
-<div class="paragraph">
-<p><strong>Example Scenerio</strong></p>
+<p>The following activity diagram summarizes what happens when a user executes a new command.
+<strong>Example Scenerio</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Step 1: The user enters <code>add_reminder rd/teach rt/23/01/2019</code> to add a reminder for teaching classes.
-This adds an <code>Notes</code> object that the user has added to record what needs to be done for the class.</p>
+<p>Step 1: The user enters <code>add_reminder rd/teach rt/23/01/2019 13:00, 23/01/2019 15:00</code> to add a reminder for teaching classes.</p>
 </li>
 <li>
 <p>Step 2: <code>LogicManager</code> would use <code>TutorAidParser#parse()</code> to parse input from the user.</p>
@@ -594,6 +606,85 @@ check with the rest of the prior <code>Reminder</code> object, to ensure that th
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="delete-reminders"><a class="link" href="#delete-reminders">Delete Reminders</a></h4>
+<div class="paragraph">
+<p>This command allows the user to delete reminders from the existing reminders list through its index.</p>
+</div>
+<div class="paragraph">
+<p>The delete reminders command is facilitated by the <code>DeleteReminderCommand</code> and <code>DeleteReminderParser</code>.</p>
+</div>
+<div class="paragraph">
+<p>The delete reminder command is part of the logic component of our application. It interacts with the model component of our software application.</p>
+</div>
+<div class="paragraph">
+<p><strong>Overview</strong></p>
+</div>
+<div class="paragraph">
+<p>The <code>DeleteReminderParser</code> implements <code>Parser</code> with the following operation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>DeleteReminderParser#parse()</code> - This operation will take in an <code>int</code> input from the user, that the
+user wants to delete, which will correspond to the index shown on the reminders list on the application. This will delete
+the reminders in the reminders list. If an invalid format is entered or an invalid index is entered, there will be a prompt
+from the commmand parser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Current Implementation</strong></p>
+</div>
+<div class="paragraph">
+<p>The delete earnings command is executed by the <code>DeleteReminderCommand</code>. Currently, the deletion of any earnings is done based
+on the <code>INDEX</code> of the reminders entry.</p>
+</div>
+<div class="paragraph">
+<p>During the design of our delete reminders function, we considered between two alternatives.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/reminders/DeleteReminderSequenceDiagram.png" alt="DeleteReminderSequenceDiagram">
+</div>
+<div class="title">Figure 7. Delete Reminder Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p><strong>Example Scenerio</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Step 1: The user enters <code>delete_reminder 1</code> to delete a reminder with index 1.</p>
+</li>
+<li>
+<p>Step 2: <code>LogicManager</code> would use <code>TutorAidParser#parse()</code> to parse input from the user.</p>
+</li>
+<li>
+<p>Step 3: <code>TutorAidParser</code> would match the command word given by the user with the correct command. In this example,
+the given command is <code>delete_reminder</code>, thus, <code>deleteReminderParser</code> object would be created with the user&#8217;s input.</p>
+</li>
+<li>
+<p>Step 4: <code>deleteReminderParser</code> performs a validation check on each of the respective objects through
+<code>deleteReminderParser#parse()</code>.</p>
+</li>
+<li>
+<p>Step 5: <code>LogicManager</code> would execute <code>deleteReminderCommand#execute</code>. In this particular method, the <code>Reminder</code> object will be
+of that index will be deleted from the current unique filtered reminder list.</p>
+</li>
+<li>
+<p>Step 6: <code>deleteReminderCommand</code> would then return a <code>CommandResult</code> to <code>LogicManager</code>, which would show the user that the new reminder list.</p>
+</li>
+</ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 09:08:16 UTC</div></div></div></body></html>
+</div>
+<div class="sect2">
+<h3 id="tab-change-feature"><a class="link" href="#tab-change-feature">Tab Change feature</a></h3>
+<div class="paragraph">
+<p>Tab Change feature is a type of Command that allows users to change to respective windows for using different features in the system.
+Tab change function is implemented in using both CLI and GUI. User can execute tab change by typing command in the command box or by interaction with the GUI component (Menu Bar)</p>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 13:48:49 UTC</div></div></div></body></html>
