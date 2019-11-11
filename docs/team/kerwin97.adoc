@@ -19,7 +19,7 @@ This portfolio page aims to document the contributions I have made in the develo
 
 TutorAid is a useful application created for Tutors, by Tutors. The purpose of our application is to be a all encompassing solution to store information such as notes and reminders. Our product is made for tutors and teaching assistants in NUS. However, we have plans to expand to tutors in general. +
 
-TutorAid is a comprehensive solution with complete integration of its features. Some of its features include: tasks, reminders, notes, student profile and earnings. Our features have been tailored to suit the needs of our target audience.
+TutorAid is a comprehensive solution with complete integration of its features. Some of its main features include: tasks, reminders, notes, student profile and earnings. Our features have been tailored to suit the needs of our target audience.
 By storing their information in one central location, tutors' workspace can be made more organized. This can help improve productivity and enable a smooth workflow. A clear space is indeed a clear mind. +
 
 TutorAid is a Command Line Interface (CLI) based tool that caters to professionals adept at typing. We have recently added more Graphical User Interface (GUI) features to make TutorAid more user friendly and to increase efficiency.
@@ -36,7 +36,7 @@ The following sections illustrate these enhancements in more detail, as well as 
 == Summary of contributions
 
 * *Major enhancement*: added *Reminders Feature*
-** What it does: allows users to add Reminders. These will then be displayed in a reminders window that will pop up and remind users of urgent tasks.
+** What it does: allows users to add Reminders. These will then be displayed in a reminders window that will pop up to remind users of urgent tasks.
 ** Justification: This feature improves the product significantly because users can be reminded of urgent and important tasks at hand. This will ensure that users have ample time to plan and complete their tasks punctually.
 ** Highlights: This feature allows users to create, remove and find Reminders. It required an in-depth analysis of design as it is also linked to the the Tasks feature. Users can create reminders for a specific task when creating said task. This highlights TutorAid's integration of all features with each other.
 
