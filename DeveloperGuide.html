@@ -29,9 +29,8 @@
 <li><a href="#learn-wrong-commands-as-custom-commands-feature">3.5. Learn wrong commands as custom commands feature</a></li>
 <li><a href="#undo-redo-feature">3.6. Undo/Redo feature</a></li>
 <li><a href="#tab-change-feature">3.7. Tab Change feature</a></li>
-<li><a href="#proposed-data-encryption">3.8. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.9. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.10. Configuration</a></li>
+<li><a href="#logging">3.8. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -42,23 +41,37 @@
 <li><a href="#use-cases">Appendix C: Use Cases</a></li>
 <li><a href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></li>
 <li><a href="#glossary">Appendix E: Glossary</a></li>
-<li><a href="#product-survey">Appendix F: Product Survey</a></li>
-<li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
+<li><a href="#instructions-for-manual-testing">Appendix F: Instructions for Manual Testing</a>
 <ul class="sectlevel2">
-<li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
-<li><a href="#deleting-a-person">G.2. Deleting a person</a></li>
-<li><a href="#saving-data">G.3. Saving data</a></li>
-<li><a href="#adding-a-task">G.4. Adding a task</a></li>
-<li><a href="#editing-a-task">G.5. Editing a task</a></li>
-<li><a href="#deleting-a-task">G.6. Deleting a task</a></li>
-<li><a href="#finding-a-task">G.7. Finding a task</a></li>
-<li><a href="#listing-all-tasks">G.8. Listing all tasks</a></li>
-<li><a href="#undoing-redoing-commands">G.9. Undoing/Redoing commands</a></li>
-<li><a href="#adding-a-reminder">G.10. Adding a reminder</a></li>
-<li><a href="#deleting-a-reminder">G.11. Deleting a reminder</a></li>
-<li><a href="#finding-a-reminder">G.12. Finding a reminder</a></li>
-<li><a href="#listing-all-reminders">G.13. Listing all reminders</a></li>
-<li><a href="#tab-change">G.14. Tab Change</a></li>
+<li><a href="#launch">F.1. Launch</a></li>
+<li><a href="#registering-an-account">F.2. Registering an account</a></li>
+<li><a href="#logging-in">F.3. Logging In</a></li>
+<li><a href="#deleting-a-person">F.4. Deleting a person</a></li>
+<li><a href="#adding-an-earning">F.5. Adding an earning</a></li>
+<li><a href="#deleting-an-earning">F.6. Deleting an earning</a></li>
+<li><a href="#finding-an-earning">F.7. Finding an earning</a></li>
+<li><a href="#claiming-an-earning">F.8. Claiming an earning</a></li>
+<li><a href="#automating-earnings">F.9. Automating earnings</a></li>
+<li><a href="#adding-automated-earnings">F.10. Adding automated earnings</a></li>
+<li><a href="#saving-data">F.11. Saving data</a></li>
+<li><a href="#adding-a-task">F.12. Adding a task</a></li>
+<li><a href="#editing-a-task">F.13. Editing a task</a></li>
+<li><a href="#deleting-a-task">F.14. Deleting a task</a></li>
+<li><a href="#finding-a-task">F.15. Finding a task</a></li>
+<li><a href="#listing-all-tasks">F.16. Listing all tasks</a></li>
+<li><a href="#undoing-redoing-commands">F.17. Undoing/Redoing commands</a></li>
+<li><a href="#adding-a-reminder">F.18. Adding a reminder</a></li>
+<li><a href="#deleting-a-reminder">F.19. Deleting a reminder</a></li>
+<li><a href="#finding-a-reminder">F.20. Finding a reminder</a></li>
+<li><a href="#listing-all-reminders">F.21. Listing all reminders</a></li>
+<li><a href="#tab-change">F.22. Tab Change</a></li>
+<li><a href="#listing-by-class">F.23. Listing by class</a></li>
+<li><a href="#mass-assigning-class">F.24. Mass Assigning Class</a></li>
+<li><a href="#mass-marking-attendance">F.25. Mass Marking Attendance</a></li>
+<li><a href="#mass-marking-participation">F.26. Mass Marking Participation</a></li>
+<li><a href="#setting-picture">F.27. Setting picture</a></li>
+<li><a href="#unknown-wrong-command">F.28. Unknown wrong command</a></li>
+<li><a href="#delete-custom-command">F.29. Delete Custom Command</a></li>
 </ul>
 </li>
 </ul>
@@ -1536,20 +1549,14 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.8. [Proposed] Data Encryption</a></h3>
-<div class="paragraph">
-<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.9. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.10, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1580,7 +1587,7 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.10. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1640,7 +1647,7 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Value proposition</strong>: manage calendar and track earnings faster than a typical mouse/GUI driven app</p>
+<p><strong>Value proposition</strong>: manage students, tasks, notes, earnings and reminders faster than a typical mouse/GUI driven app. Helps to improve workflow by organizing all teaching-related information in one common place and hence saves time.</p>
 </div>
 </div>
 </div>
@@ -1675,6 +1682,12 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">track all the information about my students</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remember key info about them easily when I need it</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add a new class</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">check the details of the task when I want</p></td>
 </tr>
@@ -1701,6 +1714,12 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 <td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">check the information of my classes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">know more about my students' situation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tutor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see who&#8217;s not coming for class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check up on them</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
@@ -1845,6 +1864,317 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 </li>
 </ul>
 </div>
+<h3 id="use-case-add-earnings" class="discrete">Use case: Add Earnings</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User adds an earnings by specifying its details</p>
+</li>
+<li>
+<p>TutorAid shows a success message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. The arguments provided are invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. The mandatory arguments are not provided.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-earnings" class="discrete">Use case: Delete Earnings</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to change tab to earnings</p>
+</li>
+<li>
+<p>TutorAid shows a list of earnings</p>
+</li>
+<li>
+<p>User requests to delete a specific earnings in the list</p>
+</li>
+<li>
+<p>TutorAid deletes the earnings</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+<li>
+<p>3a. The given index is invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-find-earnings" class="discrete">Use case: Find Earnings</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to find earnings with specified keyword(s)</p>
+</li>
+<li>
+<p>TutorAid shows a success message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. The mandatory arguments are not provided.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2a. The arguments provided have no match.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>2a1. TutorAid shows an empty list.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-claim-earnings" class="discrete">Use case: Claim Earnings</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to claim earnings with specified arguments</p>
+</li>
+<li>
+<p>TutorAid shows a success message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. The mandatory arguments are not provided.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. The arguments provided are invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1b1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-automate-earnings" class="discrete">Use case: Automate Earnings</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to change tab to earnings</p>
+</li>
+<li>
+<p>TutorAid shows a list of earnings</p>
+</li>
+<li>
+<p>User requests to automate a specific earnings in the list</p>
+</li>
+<li>
+<p>TutorAid add the earnings into a list.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+<li>
+<p>3a. The mandatory arguments are not provided.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3a1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b. The arguments provided are invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3b1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3c. The given index is invalid.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3c1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-add-automated-earnings" class="discrete">Use case: Add Automated Earnings</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to add automated earnings</p>
+</li>
+<li>
+<p>TutorAid shows a success message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1a. No new earnings are added.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1a1. TutorAid shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p><em>{More to be added}</em></p>
 </div>
@@ -1866,9 +2196,6 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -1889,44 +2216,7 @@ Tab change function is implemented in using both CLI and GUI. User can execute t
 </div>
 </div>
 <div class="sect1">
-<h2 id="product-survey"><a class="link" href="#product-survey">Appendix F: Product Survey</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Product Name</strong></p>
-</div>
-<div class="paragraph">
-<p>Author: &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Pros:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Cons:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a></h2>
+<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix F: Instructions for Manual Testing</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Given below are instructions to test the app manually.</p>
@@ -1944,7 +2234,7 @@ These instructions only provide a starting point for testers to work on; testers
 </table>
 </div>
 <div class="sect2">
-<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">G.1. Launch and Shutdown</a></h3>
+<h3 id="launch"><a class="link" href="#launch">F.1. Launch</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1977,12 +2267,61 @@ Expected: The most recent window size and location is retained.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
+<div class="sect2">
+<h3 id="registering-an-account"><a class="link" href="#registering-an-account">F.2. Registering an account</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Registering an account</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>register user/bryan pass/Pa55w0rd</code><br>
+Expected: Success message shown in status bar.</p>
+</li>
+<li>
+<p>Test case: <code>register user/abc pass/hello</code><br>
+Expected: No account created. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect register commands to try: <code>register</code>, <code>register bryan Pa55w0rd</code><br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">G.2. Deleting a person</a></h3>
+<h3 id="logging-in"><a class="link" href="#logging-in">F.3. Logging In</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Logging into TutorAid with personal account</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>login user/bryan pass/Pa55w0rd</code><br>
+Expected: Login Window closes and Main Window pops up.</p>
+</li>
+<li>
+<p>Test case: <code>login user/wad efsf pass/hello</code><br>
+Expected: Not logged in. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect login commands to try: <code>login</code>, <code>login bryan Pa55w0rd</code><br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">F.4. Deleting a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1994,14 +2333,14 @@ Expected: The most recent window size and location is retained.</p>
 </li>
 <li>
 <p>Test case: <code>delete 1</code><br>
-Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.</p>
+Expected: First person is deleted from the list. Details of the deleted person shown in the status message.</p>
 </li>
 <li>
 <p>Test case: <code>delete 0</code><br>
-Expected: No person is deleted. Error details shown in the status message. Status bar remains the same.</p>
+Expected: No person is deleted. Error details shown in the status message.</p>
 </li>
 <li>
-<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size), <code>delete Tom</code><br>
 Expected: Similar to previous.</p>
 </li>
 </ol>
@@ -2009,32 +2348,177 @@ Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">G.3. Saving data</a></h3>
+<h3 id="adding-an-earning"><a class="link" href="#adding-an-earning">F.5. Adding an earning</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Dealing with missing/corrupted data files</p>
+<p>Adding earnings to TutorAid</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
+<p>Prerequisites: Arguments are valid and mandatory parameters are provided.</p>
+</li>
+<li>
+<p>Test case: <code>add_earnings d/11/10/2014 type/lab c/CS1101S amt/90.30</code><br>
+Expected: Adds an earnings of $90.30 of a CS1101S Lab lesson to TutorAid on 11/10/2014</p>
+</li>
+<li>
+<p>Test case: <code>add_earnings d/10/03/2019 type/tut</code><br>
+Expected: No earnings is added Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect add earnings commands to try: <code>add_earnings</code>, <code>add_earnings d/today type/c</code> and <code>add_earnings 2</code><br>
+Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-task"><a class="link" href="#adding-a-task">G.4. Adding a task</a></h3>
+<h3 id="deleting-an-earning"><a class="link" href="#deleting-an-earning">F.6. Deleting an earning</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting earnings while all earnings are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all earnings either using tab button on application or <code>change_tab tab/earnings</code> command. Multiple earnings in the list.</p>
+</li>
+<li>
+<p>Test case: <code>delete_earnings 1</code><br>
+Expected: First earnings is deleted from the list. Details of the deleted earnings shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>delete_earnings 0</code><br>
+Expected: No earnings is deleted. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect delete earnings command to try: <code>delete_earnings</code>, <code>delete_earnings x</code> (where x is larger than the list size).<br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-an-earning"><a class="link" href="#finding-an-earning">F.7. Finding an earning</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Finding earnings</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>find_earnings CS</code><br>
+Expected: All earnings that contains "CS" (regardless case of the letters)
+will show in TutorAid. Partial match of "CS" will be shown as well. Number of earnings found were stated in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>find_earnings</code><br>
+Expected: No earnings will be shown. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="claiming-an-earning"><a class="link" href="#claiming-an-earning">F.8. Claiming an earning</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Change the Claim status of an earning</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all earnings either using tab button on application or <code>change_tab tab/earnings</code> command. Multiple earnings in the list.</p>
+</li>
+<li>
+<p>Test case: <code>claim_earnings 1 claim/processing</code><br>
+Expected: First earnings will change claim status to <code>processing</code>.</p>
+</li>
+<li>
+<p>Test case: <code>claim_earnings 1</code><br>
+Expected: No change in claim status of the first earnings. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect claim earnings command to try: <code>claim_earnings 1 claim/done</code>, <code>claim_earnings</code><br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="automating-earnings"><a class="link" href="#automating-earnings">F.9. Automating earnings</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Automate the addition of earnings</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all earnings either using tab button on application or <code>change_tab tab/earnings</code> command. Multiple earnings in the list.</p>
+</li>
+<li>
+<p>Test case: <code>weekly_earnings 1 count/2</code><br>
+Expected: Success message shows up. No change in earnings list. First earnings will be automatically added in the next 2 weeks on the same day of the week, after invoking the <code>auto</code> command.</p>
+</li>
+<li>
+<p>Test case: <code>weekly_earnings 0 count/4</code><br>
+Expected: No earnings will be automatically added. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+<li>
+<p>Other incorrect weekly earnings command to try: <code>weekly_earnings</code>, <code>weekly_earnings 3 count/15</code>, <code>weekly_earnings x count/8</code> (where x is larger than the list size).<br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-automated-earnings"><a class="link" href="#adding-automated-earnings">F.10. Adding automated earnings</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Adds automated earnings to list.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: There must have been a few pre-existing earnings that were invoked by the <code>weekly_earnings</code> command.</p>
+</li>
+<li>
+<p>Test case: <code>auto</code><br>
+Expected: Depending on the number of earnings that were invoked by <code>weekly_earnings</code> command and the day of the week, earnings will be automatically added to the list.</p>
+</li>
+<li>
+<p>Test case: <code>auto 5</code><br>
+Expected: No earnings are added. Error details shown in the status message. Status bar remains the same.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-data"><a class="link" href="#saving-data">F.11. Saving data</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="adding-a-task"><a class="link" href="#adding-a-task">F.12. Adding a task</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2061,7 +2545,7 @@ Expected: No task is added. Error details and correct format shown in the status
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-task"><a class="link" href="#editing-a-task">G.5. Editing a task</a></h3>
+<h3 id="editing-a-task"><a class="link" href="#editing-a-task">F.13. Editing a task</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2089,7 +2573,7 @@ Expected: No task is changed. Error details and correct format shown in the stat
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-task"><a class="link" href="#deleting-a-task">G.6. Deleting a task</a></h3>
+<h3 id="deleting-a-task"><a class="link" href="#deleting-a-task">F.14. Deleting a task</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2120,7 +2604,7 @@ Expected: No task is deleted. Error details and correct format shown in the stat
 </div>
 </div>
 <div class="sect2">
-<h3 id="finding-a-task"><a class="link" href="#finding-a-task">G.7. Finding a task</a></h3>
+<h3 id="finding-a-task"><a class="link" href="#finding-a-task">F.15. Finding a task</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2152,7 +2636,7 @@ Expected: Error details and correct format shown in the status message.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-tasks"><a class="link" href="#listing-all-tasks">G.8. Listing all tasks</a></h3>
+<h3 id="listing-all-tasks"><a class="link" href="#listing-all-tasks">F.16. Listing all tasks</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2174,7 +2658,7 @@ Expected: Error details shown in the status message.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-redoing-commands"><a class="link" href="#undoing-redoing-commands">G.9. Undoing/Redoing commands</a></h3>
+<h3 id="undoing-redoing-commands"><a class="link" href="#undoing-redoing-commands">F.17. Undoing/Redoing commands</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2196,7 +2680,7 @@ Expected: The recovered task was deleted again from the list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-reminder"><a class="link" href="#adding-a-reminder">G.10. Adding a reminder</a></h3>
+<h3 id="adding-a-reminder"><a class="link" href="#adding-a-reminder">F.18. Adding a reminder</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2224,7 +2708,7 @@ Expected: No reminder is added. Error details and correct format shown in the st
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-reminder"><a class="link" href="#deleting-a-reminder">G.11. Deleting a reminder</a></h3>
+<h3 id="deleting-a-reminder"><a class="link" href="#deleting-a-reminder">F.19. Deleting a reminder</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2252,7 +2736,7 @@ Expected: No reminder is deleted. Error details and correct format shown in the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="finding-a-reminder"><a class="link" href="#finding-a-reminder">G.12. Finding a reminder</a></h3>
+<h3 id="finding-a-reminder"><a class="link" href="#finding-a-reminder">F.20. Finding a reminder</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2284,7 +2768,7 @@ Expected: Error details and correct format shown in the status message.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-reminders"><a class="link" href="#listing-all-reminders">G.13. Listing all reminders</a></h3>
+<h3 id="listing-all-reminders"><a class="link" href="#listing-all-reminders">F.21. Listing all reminders</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2306,7 +2790,7 @@ Expected: Error details shown in the status message.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="tab-change"><a class="link" href="#tab-change">G.14. Tab Change</a></h3>
+<h3 id="tab-change"><a class="link" href="#tab-change">F.22. Tab Change</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2327,5 +2811,207 @@ Expected: Error details shown in the status message.</p>
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="listing-by-class"><a class="link" href="#listing-by-class">F.23. Listing by class</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>List out all students in the class.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>list_class CS2030</code><br>
+Expected: All students in class CS2030 are shown.</p>
+</li>
+<li>
+<p>Test case: <code>list_class CS2030 CS2040</code><br>
+Expected: All students in class CS2030 and CS2040 are shown.</p>
+</li>
+<li>
+<p>Test case: <code>list_class RANDOM STRING</code><br>
+Expected: No students are shown.</p>
+</li>
+</ol>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 14:49:30 UTC</div></div></div></body></html>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mass-assigning-class"><a class="link" href="#mass-assigning-class">F.24. Mass Assigning Class</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Assigns the class to all students indicated.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>assign_class 1,2,3 c/CS2030</code><br>
+Expected: Students at index 1,2 and 3 are assigned to class CS2030. (assuming the list size is at least 3)</p>
+</li>
+<li>
+<p>Test case: <code>assign_class 1,2,3 c/CS2030</code><br>
+Expected: Nobody is assigned to class CS2030. (assuming the list size is less than 3)</p>
+</li>
+<li>
+<p>Test case: <code>assign_class 1,2,100 c/CS2030</code><br>
+Expected: Nobody is assigned to class CS2030. (assuming the list size is 5)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mass-marking-attendance"><a class="link" href="#mass-marking-attendance">F.25. Mass Marking Attendance</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Increases the attendance of indicated students by one.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>mark_attendance 1,2,3</code><br>
+Expected: Students at index 1,2 and 3 have their attendance increased (assuming the list size is at least 3)</p>
+</li>
+<li>
+<p>Test case: <code>mark_attendance 1,2,3</code><br>
+Expected: Nobody has their attendance increased (assuming the list size is less than 3)</p>
+</li>
+<li>
+<p>Test case: <code>mark_attendance 1,2,100</code><br>
+Expected: Nobody has their attendance increased  (assuming the list size is 5)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mass-marking-participation"><a class="link" href="#mass-marking-participation">F.26. Mass Marking Participation</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Increases the participation of indicated students by one.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>mark_participation 1,2,3</code><br>
+Expected: Students at index 1,2 and 3 have their participation increased (assuming the list size is at least 3)</p>
+</li>
+<li>
+<p>Test case: <code>mark_participation 1,2,3</code><br>
+Expected: Nobody has their participation increased (assuming the list size is less than 3)</p>
+</li>
+<li>
+<p>Test case: <code>mark_participation 1,2,100</code><br>
+Expected: Nobody has their participation increased  (assuming the list size is 5)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="setting-picture"><a class="link" href="#setting-picture">F.27. Setting picture</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sets the profile picture of the indicated student</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>set_pic 1 pic/test.jpg</code><br>
+Expected: Student at index 1 is given test.jpg as his profile picture. (assuming test.jpg is in the same directory as TutorAid)</p>
+</li>
+<li>
+<p>Test case: <code>set_pic 1 pic/test.docx</code><br>
+Expected: Error occurs. Only .jpg/.png/.gif/.bmp is supported.</p>
+</li>
+<li>
+<p>Test case: <code>set_pic 1 pic/test.jpg</code><br>
+Expected: Error occurs. TutorAid can&#8217;t find the picture. (assuming test.jpg is not in the same directory as TutorAid)</p>
+</li>
+<li>
+<p>Test case: <code>set_pic 100 pic/test.jpg</code><br>
+Expected: Error occurs. Index is invalid. (assuming a list size of 10 and test.jpg is in the same directory as TutorAid)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unknown-wrong-command"><a class="link" href="#unknown-wrong-command">F.28. Unknown wrong command</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Learns a wrong command the user typed in as a basic command.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>gibberish</code><br>
+Expected: TutorAid prompts the user for the command word they intended to execute. (assuming gibberish is not yet learned)</p>
+</li>
+<li>
+<p>Test case: <code>ad n/Caesar c/CS1000</code><br>
+Expected:  TutorAid prompts the user for the command word they intended to execute. (assuming ad is not yet learned)</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Test case: <code>cancel</code><br>
+Expected: The unknown command is discarded and normal operations can resume.</p>
+</li>
+<li>
+<p>Test case: <code>gibberish</code><br>
+Expected: TutorAid prompts the user for the command word they intended to execute. (assuming gibberish is not yet learned)</p>
+</li>
+<li>
+<p>Test case: <code>add n/Caesar c/CS2100</code><br>
+Expected: TutorAid can&#8217;t learn full commands. Prompts the user which command word they want to map the last unknown command to again.</p>
+</li>
+<li>
+<p>Test case: <code>add</code><br>
+Expected: TutorAid learns the last unknown command as <code>add</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="delete-custom-command"><a class="link" href="#delete-custom-command">F.29. Delete Custom Command</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deletes a wrong custom command previously learnt.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>deleteCustomCommand VALIDCUSTOMCOMMAND</code><br>
+Expected: The custom command is deleted.</p>
+</li>
+<li>
+<p>Test case: <code>deleteCustomCommand INVALIDCUSTOMCOMMAND</code><br>
+Expected: Error. Invalid command, TutorAid can&#8217;t find such a command to delete.</p>
+</li>
+<li>
+<p>Test case: <code>deleteCustomCommand BASICCOMMAND</code><br>
+Expected: Error. You can&#8217;t delete a basic built-in command.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 14:51:22 UTC</div></div></div></body></html>
